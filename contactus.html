@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The President Hotel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+body {
+    background-image: url(restra.jpg);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+</style>
+</head>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="P.png" width="50" height="30" class="d-inline-block align-top" alt="The President Hotel & Resorts"> The President Hotel & Resort
+        </a>
+      
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+             <a class="nav-link" href="#">Home</a>
+            </li>
+      
+            <li class="nav-item active">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Dining</a>
+            </li>
+             <li class="nav-item active">
+              <a class="nav-link" href="#">Room Booking</a>
+            </li>
+            
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">More</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Movie Theatre</a>
+                <a class="dropdown-item" href="#">Gallery</a>
+                <a class="dropdown-item" href="#">Gaming zone</a>
+              </div>
+            </li>
+          </ul>
+      
+            <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Login<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+      
+      
+          
+        </ul>
+      
+        </div>
+      </nav>
+  <!-- Contact Us Section -->
+    <section class="Material-contact-section section-padding section-dark">
+      <div class="container">
+          <div class="row">
+              <!-- Section Titile -->
+              <div id ="title" class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                <h1 class="section-title">Love to Hear From You</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content.</p>
+
+                <div class="find-widget">
+                 Company:  <a href="#"></a>
+                </div>
+                <div class="find-widget">
+                 Address: <a href="#"></a>
+                </div>
+                <div class="find-widget">
+                  Phone:  <a href="#"></a>
+                </div>
+                
+                <div class="find-widget">
+                  Website:  <a href="#"></a>
+                </div>
+                <div class="find-widget">
+                   Program: <a href="#"></a>
+                </div>
+            </div>
+              <!-- contact form -->
+              <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                  <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                      <!-- Name -->
+                      <div class="form-group label-floating">
+                        <label class="control-label" for="name">Name</label>
+                        <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- email -->
+                      <div class="form-group label-floating">
+                        <label class="control-label" for="email">Email</label>
+                        <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- Subject -->
+                      <div class="form-group label-floating">
+                        <label class="control-label">Subject</label>
+                        <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- Message -->
+                      <div class="form-group label-floating">
+                          <label for="message" class="control-label">Message</label>
+                          <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                          <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- Form Submit -->
+                      <div class="form-submit mt-5">
+                          <button class="btn btn-success" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
+                          <div id="msgSubmit" class="h3 text-center hidden"></div>
+                          <div class="clearfix"></div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </section>
+<div class="footer">
+    <!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+      
+          <!-- Grid row -->
+          <div class="row">
+      
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+      
+              <!-- Content -->
+              <h5 class="text-uppercase">The President</h5>
+              <p>Group of Hotel and Resorts</p>
+            </div>
+            <!-- Grid column -->
+            <div class="col-md">
+                    <div class="social-container">
+                            <a class="sbtn" href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                  </a>
+                                  <a class="sbtn" href="#">
+                                    <i class="fab fa-twitter"></i>
+                                  </a>
+                                  <a class="sbtn" href="#">
+                                    <i class="fab fa-google"></i>
+                                  </a>
+                                  <a class="sbtn" href="#">
+                                    <i class="fab fa-instagram"></i>
+                                  </a>
+                                  <a class="sbtn" href="#">
+                                    <i class="fab fa-youtube"></i>
+                                  </a>
+                    </div>
+            </div>
+            <!-- Grid column -->
+      
+          </div>
+          <!-- Grid row -->
+      
+        </div>
+        <!-- Footer Links -->
+      
+        <!-- Copyright -->
+        <div class="footer-copyright text-left py-3">© 2018 Copyright:
+          <a href="#">thepresident</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+      </div>
+    </html>
