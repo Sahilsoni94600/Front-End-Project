@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  <style>
+  .carousel-inner img {
+    width: 100%;
+  }
+  .reservation-form{
+  	max-width: 60%;
+  	margin-left: 205px;
+  }
+  .carousel-inner{
+  	height: 50%;
+  }
+  #hori div{
+    text-align: center;
+    padding-top: 25px;
+    
+    background-color: #d9d9d2;
+    height: 70px;
+  }
+  #bookus{
+    border-right:1px solid ;
+  }
+  #under{
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+}
+#pop img{
+  width: 100%;
+  height: 100%;
+}
+#pop div{
+  margin-bottom: 15px;
+  align-items: center;
+}
+#pop img{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#pop div:hover img{
+  opacity: 0.3;
+}
+
+#pop div:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #cfa346;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+ #hori2 div{
+    text-align: left;
+    padding-top: 10px;
+    background-color: #d9d9d2;
+    height: 180px;
+  }
+  .id2{
+    text-align: center;
+  }
+  #knowus{
+    width: 20%;
+  }
+  #knowus2{
+    width: 30%;
+  }
+  #knowus3{
+    width: 50%;
+  }
+  h3, h4 {
+    letter-spacing: 10px;      
+    font-size: 20px;
+  }
+  .container {
+    padding-top: 80px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: orangered;
+    color: #fff
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+.centered {
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 80px;
+}
+.bookingWidget{
+    margin-bottom: 20px;
+    padding: 25px 25px 25px;
+    min-height: 150px;
+    width: 100%;
+    float: left;
+}
+.goldenbg {
+    background-image: url("9.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 200%;
+}
+.posRel {
+    position: relative;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.image:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+  </style>
+  </head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+
+        <a class="navbar-brand" href="index.html">The President Hotels</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+             <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="resteraunt.html">Restaurant</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="movietheatre.html">Movie Theatre</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Dining</a>
+            </li>
+             <li class="nav-item active">
+              <a class="nav-link" href="#">Room Booking</a>
+            </li>
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">More</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">About</a>
+                <a class="dropdown-item" href="#">Gallery</a>
+                <a class="dropdown-item" href="#">Gaming zone</a>
+                <a class="dropdown-item" href="contactus.html">Contact</a>
+              </div>
+            </li>
+          </ul>      
+            <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="LoginSignup.html">Login<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="LoginSignup.html">Sign Up</a>
+            </li>    
+        </ul>
+    </div>
+</nav>
+
+        <div id="content" class="site-content">
+<!-- Parallax Effect -->
+    <script type="text/javascript">jQuery(document).ready(function () {
+            jQuery('#parallax-pagetitle').parallax("50%", -0.55);
+        });</script>
+    <div class="parallax-effect">
+        <div id="parallax-pagetitle" style="background-image: url(http://www.slashdown.net/starhotel-wp/wp-content/uploads/2015/03/parallax-01.jpg);">
+            <div class="color-overlay">
+                <!-- Page title -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                                                                                
+                                <ol class="breadcrumb">
+                                    <li><a href="http://www.slashdown.net/starhotel-wp/room/"></a></l>
+    								<li class="active">Business Class</li>                          
+    							</ol>
+                               
+                                                        <h1>Business Class</h1>                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+                        <!-- Slider -->
+    
+                <div class="col-sm-12 col-md-6">
+                    <div id="owl-standard" class="owl-carousel">
+                        <div class='item mfp_open'> <a href='http://www.slashdown.net/starhotel-wp/wp-content/uploads/2015/03/room-slider-01.jpg'><img src='http://www.slashdown.net/starhotel-wp/wp-content/uploads/2015/03/room-slider-01.jpg' alt='' class='img-responsive'></a> </div><div class='item mfp_open'>  </div>                    </div>
+                </div>
+            
+
+            <!-- Reservation form -->
+                        <div id="reservation-form" class="mt50 clearfix">
+                <div class="reservation-form col-sm-12 col-md-3">
+                    <form class="reservation-vertical clearfix" role="form" method="post" 
+                                            action="http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/inc/sendmail/reservation.php"
+                     name="reservationform" id="reservationform">
+                        <h2 class="lined-heading"><span>Reservation</span></h2>
+                                                
+                            <div class="form-group">
+                                <label for="email" accesskey="E">E-mail</label>
+                                                                    <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Please fill in your email"> </div>
+                                                                <input name="email" type="text" id="email" value="" class="form-control" placeholder="Please enter your E-mail"/>
+                            </div>
+                                                            <div class="form-group">
+                                    <label for="phone" accesskey="P">Phone</label>
+                                                                            <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Please add your country code"></div>
+                                                                        <input name="phone" type="text" id="phone" value="" class="form-control" placeholder="Your phone number"/>
+                                </div>
+                            							<div class="form-group">
+								
+							</div>
+                            <div class="form-group">
+                                <label for="checkin">Check-in</label>
+                                                                    <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-In is from 11:00">  </div>
+                                                                
+                                
+                                <input name="checkin" type="text" id="checkin" value="" class="form-control" placeholder="Check-in"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout">Check-out</label>
+                                                                    <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-out is from 12:00"> </div>
+                                                                
+                                
+                                <input name="checkout" type="text" id="checkout" value="" class="form-control" placeholder="Check-out"/>
+                            </div>
+                            <div class="form-group">
+                                <div class="guests-select">
+                                    <label>Guests</label>
+                                    <div class="total form-control" id="test">1</div>
+                                    <div class="guests">
+                                        <div class="form-group adults">
+                                            <label for="adults">Adults</label>
+                                                                                            <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="+18 years"> 	</div>
+                                                                                        <select name="adults" id="adults" class="form-control">
+                                                <option value='1'>1 Adult(s)</option><option value='2'>2 Adult(s)</option><option value='3'>3 Adult(s)</option>                                            </select>
+                                        </div>
+                                        <div class="form-group children">
+                                            <label for="children">Children</label>
+                                                                                            <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="0 till 18 years"> </div>
+                                                                                        
+                                            <select name="children" id="children" class="form-control">
+                                                <option value='0'>0 Child(ren)</option><option value='1'>1 Child(ren)</option><option value='2'>2 Child(ren)</option><option value='3'>3 Child(ren)</option>                                            </select>
+                                        </div>
+                                        <button type="button" class="btn btn-ghost-color button-save btn-block">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+                        </form>
+					</div>	
+                </div>
+                            </div>
+        </div>
+
+
+        <!-- Room Content -->
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+        <h2 class="lined-heading mt50">
+            <span>
+            Room Details
+            </span>
+        </h2>
+        
+      <table class="table table-striped mt30">
+        <tbody>
+            
+        <tr>
+        
+
+        <td>
+        <i class="fa fa-check-circle"></i> Double Bed
+        </td>
+  
+
+        <td>
+        <i class="fa fa-check-circle"></i> Free Internet
+        </td>
+  
+
+        <td>
+        <i class="fa fa-check-circle"></i> Free Newspaper
+        </td>
+  
+
+        </tr>
+  
+
+        <tr>
+        
+
+        <td>
+        <i class="fa fa-check-circle"></i> 60 square meter
+        </td>
+  
+
+        <td>
+        <i class="fa fa-check-circle"></i> Beach view
+        </td>
+  
+
+        <td>
+        <i class="fa fa-check-circle"></i> 2 persons
+        </td>
+  
+
+        </tr>
+  
+
+        <tr>
+        
+
+        <td>
+        <i class="fa fa-check-circle"></i> Double Bed
+        </td>
+  
+
+        <td>
+        <i class="fa fa-check-circle"></i> Free Internet
+        </td>
+  
+
+        <td>
+        <i class="fa fa-check-circle"></i> Breakfast included
+        </td>
+  
+
+        </tr>
+  
+
+        <tr>
+        
+
+        <td>
+        <i class="fa fa-check-circle"></i> Private Balcony
+        </td>
+  
+
+        <td>
+        <i class="fa fa-check-circle"></i> Flat Screen TV
+        </td>
+  
+
+        <td>
+        <i class="fa fa-check-circle"></i> Jacuzzi
+        </td>
+  
+
+        </tr>
+  
+        </tbody>
+        </table>
+  </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+        <h2 class="lined-heading mt50">
+            <span>
+            Overview
+            </span>
+        </h2>
+        
+	<div class="wpb_tabs wpb_content_element" data-interval="0">
+		<div class="wpb_wrapper wpb_tour_tabs_wrapper ui-tabs vc_clearfix">
+			<ul class="wpb_tabs_nav ui-tabs-nav vc_clearfix"><li><a href="#tab-1426532551126-9">Overview</a></li><li><a href="#tab-1426532551287-5">Facilities</a></li><li><a href="#tab-1426532631097-2-7">Extra</a></li></ul>
+	<div id="tab-1426532551126-9" class="wpb_tab ui-tabs-panel wpb_ui-tabs-hide vc_clearfix">
+		
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>The President Hotels Group takes great pride in ensuring our guests enjoy the most relaxing and comfortable stay. All areas of the resort, from the rooms to the exquisitely landscaped gardens have been totally upgraded and refurbished. As a result, our four hotels conform to, and even exceed, the five-star standard. In addition guests staying at President Hotel are offered a myriad of facilities and activities in which no other hotel in Pattaya can match.</p>
+<p><img class="pull-right" src="http://www.slashdown.nl/starhotel/images/tab/restaurant-01.jpg" alt="food" /></p>
+
+		</div>
+	</div>
+
+	</div>
+
+	<div id="tab-1426532551287-5" class="wpb_tab ui-tabs-panel wpb_ui-tabs-hide vc_clearfix">
+		
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>All the rooms and suites have adaptations to all special needs.Door peephole height adjusted for wheelchair users.Lift with Braille signage to all floors.Portable wooden ramps for access to rooms and restaurants.Swimming pools with safety rails.All hotel toilets have disabled facilities.</p>
+
+		</div>
+	</div>
+
+	</div>
+
+	<div id="tab-1426532631097-2-7" class="wpb_tab ui-tabs-panel wpb_ui-tabs-hide vc_clearfix">
+		
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Our staff will endeavour to assist our guests with special needs as much as they possibly can and will attempt to anticipate their needs, whilst also respecting their independence. If you need anything special, whether it is an aid or a particular diet, please let the staff know and if it is possible, all will be arranged.
+
+All of these, combined with special arrangement and decoration of the indoor and outdoor areas, guarantee a comfortable and pleasant accommodation for everyone.</p>
+
+		</div>
+	</div>
+
+	</div>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+        <h2 class="lined-heading mt50">
+           
+        </h2>
+                   
+    <!-- Rooms -->
+    <!-- <div class="rooms mt110">
+        <div class="row room-list">
+            
+                    <!-- Room
+                                                                                    <div class="col-sm-4 ">
+                                                <div class="room-thumb">
+                            <img width="356" height="228" src="http://www.slashdown.net/starhotel-wp/wp-content/uploads/2015/03/room-05.jpg" class="img-responsive wp-post-image" alt="" />                            <div class="mask">
+                                <div class="main">
+                                    <h5>Honeymoon Suite</h5>
+                                    <div class='price'> € 79<span>a night</span></div>                                </div>
+                                <div class="content">
+                                                                        <p><span>A modern hotel room in Star Hotel</span>Nunc tempor erat in magna pulvinar fermentum. Pellentesque scelerisque at leo nec vestibulum. malesuada metus.</p>
+
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <ul class="list-unstyled">
+                                                <li><i class='fa fa-check-circle'></i> Incl. breakfast</li><li><i class='fa fa-check-circle'></i> Private balcony</li><li><i class='fa fa-check-circle'></i> Sea view</li>                                            </ul>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <ul class="list-unstyled">
+                                                <li><i class='fa fa-check-circle'></i> Free Wi-Fi</li><li><i class='fa fa-check-circle'></i> Incl. breakfast</li><li><i class='fa fa-check-circle'></i> Bathroom</li>                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="http://www.slashdown.net/starhotel-wp/room/honeymoon-suite/" class="btn btn-primary btn-block"> Book now </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                                    
+        </div>
+    </div> -->
+    </div></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+<!-- Footer -->
+<div class="footer">
+                            <!-- Footer -->
+                          <footer class="page-footer font-small blue pt-4">
+                          
+                                <!-- Footer Links -->
+                                <div class="container-fluid text-center text-md-left">
+                              
+                                  <!-- Grid row -->
+                                  <div class="row">
+                              
+                                    <!-- Grid column -->
+                                    <div class="col-md-6 mt-md-0 mt-3">
+                              
+                                      <!-- Content -->
+                                      <h5 class="text-uppercase">The President</h5>
+                                      <p>Group of Hotel and Resorts</p>
+                                    </div>
+                                    <!-- Grid column -->
+                                    <div class="col-md">
+                                            <div class="social-container">
+                                                    <a class="sbtn" href="#">
+                                                            <i class="fab fa-facebook-f"></i>
+                                                          </a>
+                                                          <a class="sbtn" href="#">
+                                                            <i class="fab fa-twitter"></i>
+                                                          </a>
+                                                          <a class="sbtn" href="#">
+                                                            <i class="fab fa-google"></i>
+                                                          </a>
+                                                          <a class="sbtn" href="#">
+                                                            <i class="fab fa-instagram"></i>
+                                                          </a>
+                                                          <a class="sbtn" href="#">
+                                                            <i class="fab fa-youtube"></i>
+                                                          </a>
+                                            </div>
+
+                                    </div>
+
+                                    <!-- Grid column -->
+                              
+                                  </div>
+                                  <div class="footer-copyright text-left py-3">© 2018 Copyright:<a href="#">thepresident</a>
+                                </div>
+                                  <!-- Grid row -->
+                              
+                                </div>
+                                <!-- Footer Links -->
+                              
+                                <!-- Copyright -->
+                                
+                                <!-- Copyright -->
+                              </footer>
+                              <!-- Footer -->
+                              </div>
+
+    <!-- Go-top Button -->
+    <div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+
+</div>
+
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.slashdown.net\/starhotel-wp\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/bootstrap.min.js?ver=3.0.0'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/bootstrap-hover-dropdown.min.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/owl.carousel.min.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/jquery.parallax-1.1.3.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/jquery.nicescroll.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/jquery.magnific_popup.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/jquery-ui-1.10.4.custom.min.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/jquery.sticky.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/jquery.forms.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/waypoints.min.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/jquery.isotope.min.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var object_sh_gmaps = {"mapaddress":"Calle Hamburgo, Las Palmas, Spanje","maplatitude":"","maplongitude":"","mapicon":"http:\/\/localhost\/wordpress\/wp-content\/themes\/starhotel\/images\/ui\/gmap-icon.png","mappopover":"                    <h4>Our hotel<\/h4><p>This is our hotel<\/p>                ","mapiconwidth":"42","mapiconheight":"53","mapzoom":"12"};
+var object_sh_date = {"datepickerformat":"mm\/dd\/yy"};
+var object_sh_translations = {"translations_months":["January","February","March","April","May","June","July","August","September","October","November","December"],"translations_days":["Su","Mo","Tu","We","Th","Fr","Sa"]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/themes/starhotel/js/custom.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-includes/js/wp-embed.min.js?ver=4.9.12'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=4.11.2.1'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.slashdown.net/starhotel-wp/wp-content/plugins/js_composer/assets/lib/bower/jquery-ui-tabs-rotate/jquery-ui-tabs-rotate.min.js?ver=4.11.2.1'></script>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+</body>
+</html>
